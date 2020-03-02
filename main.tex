@@ -1,0 +1,52 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{au_journal}
+
+% \usepackage[danish]{babel} % danish may not be present, if not try "sudo apt install texlive-lang-european" a fmtutil -sys --all
+
+\newcommand\mymaketitle[1]{
+   \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+   \rule{\textwidth}{0.4pt}
+   \\   
+   \huge \bf #1\\
+   \vspace{-8pt}
+   \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+   \rule{\textwidth}{1.6pt}
+}
+
+\selectlanguage{danish}
+
+\begin{document}
+
+\title{
+	\mymaketitle{E2ISE\\Opgave A - Kaffeautomat}
+}
+\author{
+   \begin{tabular}{lcc}
+      \multicolumn{3}{c}{\textbf{Gruppe \#37}}\\
+      \textbf{Navn} & \textbf{Studienummer} & \textbf{Retning}\\
+      \toprule
+      Adam Ryager Høj & 201803767 & E\\
+      Sigurd Skov Jensen & 201804402 & I\\
+      Rasmus Kahr& 201803491 & E\\
+   \end{tabular}
+}
+\date{\today}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{opgave_1.tex}
+\newpage
+
+\input{opgave_2.tex}
+\newpage
+
+\input{opgave_3.tex}
+\newpage
+
+\input{opgave_4.tex}
+
+\end{document}

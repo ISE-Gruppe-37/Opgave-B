@@ -23,6 +23,26 @@
 \vfuzz=12pt
 %\hbadness=10000
 
+% Clickable PDF links..
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+% Section numbering.. - remove leading number.
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+\makeatletter
+\let\latexl@section\l@section
+\def\l@section#1#2{\begingroup\let\numberline\@gobble\latexl@section{#1}{#2}\endgroup}
+\makeatother
+
+
+
 % Etc 
 \usepackage{enumitem}
 \newlist{dsdsubexe}{enumerate}{1}
